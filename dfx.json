@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "build_proposal_backend": {
+      "candid": "src/build_proposal_backend/build_proposal_backend.did",
+      "declarations": {
+        "node_compatibility": true
+      },
+      "package": "build_proposal_backend",
+      "type": "rust"
+    },
+    "build_proposal_frontend": {
+      "dependencies": [
+        "build_proposal_backend"
+      ],
+      "source": [
+        "src/build_proposal_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "build_proposal_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
